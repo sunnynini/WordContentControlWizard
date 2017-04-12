@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp 
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+          xsi:type="TaskPaneApp">
+
+  <Id>a4fc04af-016f-4267-8380-0823a62e5800</Id>
+
+  <Version>1.0.0.0</Version>
+  <ProviderName>Fangrong Chen</ProviderName>
+  <DefaultLocale>zh-CN</DefaultLocale>
+  <DisplayName DefaultValue="Content Control Helper" />
+  <Description DefaultValue="This add-in can be used to play with content control APIs to interact with the Word documents."/>
+  <IconUrl DefaultValue="https://fachenaddin.azurewebsites.net/Images/ContentControlHelperIcon.png" />
+  <HighResolutionIconUrl DefaultValue="https://fachenaddin.azurewebsites.net/Images/ContentControlHelperIcon.png" />
+  <SupportUrl DefaultValue="https://fachenaddin.azurewebsites.net/Appstore/ContentControlHelperSupport.html"/>
+  <AppDomains>
+    <AppDomain>https://wordcontentcontrolwizard.azurewebsites.net</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://wordcontentcontrolwizard.azurewebsites.net/ControlPropertites.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <!-- 开始外接程序命令模式集成。 -->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+    <Description resid="residToolTip" />
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+
+          <FunctionFile resid="residFuncUrl" />
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="ExternalData1">
+              <Group id="Group1Id1">
+                <Label resid="residLabel4" />
+                <Icon>
+                  <bt:Image size="16" resid="icon1_16x16" />
+                  <bt:Image size="32" resid="icon1_32x32" />
+                  <bt:Image size="80" resid="icon1_80x80" />
+                </Icon>
+                <Control xsi:type="Button" id="Button1Id1">
+                  <Label resid="residLabel" />
+                  <Supertip>
+                    <Title resid="residLabel" />
+                    <Description resid="residToolTip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon1_16x16" />
+                    <bt:Image size="32" resid="icon1_32x32" />
+                    <bt:Image size="80" resid="icon1_80x80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>insertContentControl</FunctionName>
+                  </Action>
+                </Control>
+
+                <Control xsi:type="Button" id="Button3Id1">
+                  <Label resid="residLabel3" />
+                  <Supertip>
+                    <Title resid="residLabel3" />
+                    <Description resid="residToolTip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon2_16x16" />
+                    <bt:Image size="32" resid="icon2_32x32" />
+                    <bt:Image size="80" resid="icon2_80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="residShowTaskpaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+              <Label resid="residLabel4" />
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon1_16x16" DefaultValue="https://fachenaddin.azurewebsites.net/Images/Aa.png">
+        </bt:Image>
+        <bt:Image id="icon1_32x32" DefaultValue="https://fachenaddin.azurewebsites.net/Images/Aa.png">
+        </bt:Image>
+        <bt:Image id="icon1_80x80" DefaultValue="https://fachenaddin.azurewebsites.net/Images/Aa.png">
+        </bt:Image>
+        <bt:Image id="icon2_16x16" DefaultValue="https://fachenaddin.azurewebsites.net/Images/Propertites.png">
+          <bt:Override Locale="ja-jp" Value="https://fachenaddin.azurewebsites.net/Images/Propertites.png" />
+        </bt:Image>
+        <bt:Image id="icon2_32x32" DefaultValue="https://fachenaddin.azurewebsites.net/Images/Propertites.png">
+          <bt:Override Locale="ja-jp" Value="https://fachenaddin.azurewebsites.net/Images/Propertites.png" />
+        </bt:Image>
+        <bt:Image id="icon2_80x80" DefaultValue="https://fachenaddin.azurewebsites.net/Images/Propertites.png">
+          <bt:Override Locale="ja-jp" Value="https://fachenaddin.azurewebsites.net/Images/Propertites.png" />
+        </bt:Image>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="residFuncUrl" DefaultValue="https://wordcontentcontrolwizard.azurewebsites.net/ControlRichText.html">
+          <bt:Override Locale="ja-jp" Value="https://wordcontentcontrolwizard.azurewebsites.net/ControlRichText.html" />
+        </bt:Url>
+        <bt:Url id="residShowTaskpaneUrl" DefaultValue="https://wordcontentcontrolwizard.azurewebsites.net/ControlPropertites.html">
+        </bt:Url>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="residLabel" DefaultValue="Rich Text">
+          <bt:Override Locale="ja-jp" Value="Rich Text" />
+          <bt:Override Locale="zh-cn" Value="富文本" />
+          <bt:Override Locale="en-us" Value="Rich Text" />
+        </bt:String>
+        <bt:String id="residLabel3" DefaultValue="Propertites">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
+          <bt:Override Locale="zh-cn" Value="属性" />
+          <bt:Override Locale="en-us" Value="Properties" />
+        </bt:String>
+        <bt:String id="residLabel4" DefaultValue="Developer">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
+          <bt:Override Locale="zh-cn" Value="开发者" />
+          <bt:Override Locale="en-us" Value="Developer" />
+        </bt:String>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="residToolTip" DefaultValue="Get going by opening DEVELOPER TAB on the Ribbon">
+          <bt:Override Locale="zh-cn" Value="请打开 开发者 标签使用" />
+          <bt:Override Locale="en-us" Value="Get going by opening DEVELOPER TAB on the Ribbon" />
+          <bt:Override Locale="ja-jp" Value="JA-JP Get Started Title" />
+        </bt:String>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+
+</OfficeApp>

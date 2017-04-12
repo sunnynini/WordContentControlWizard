@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordContentControlWizard", "WordContentControlWizard\WordContentControlWizard.csproj", "{16D69DB1-6E4A-43C5-A0B4-7CAB7C232094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordContentControlWizardWeb", "WordContentControlWizardWeb\WordContentControlWizardWeb.csproj", "{83A13C8A-787B-4A0E-A730-672FA7D59428}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16D69DB1-6E4A-43C5-A0B4-7CAB7C232094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D69DB1-6E4A-43C5-A0B4-7CAB7C232094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D69DB1-6E4A-43C5-A0B4-7CAB7C232094}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{16D69DB1-6E4A-43C5-A0B4-7CAB7C232094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D69DB1-6E4A-43C5-A0B4-7CAB7C232094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D69DB1-6E4A-43C5-A0B4-7CAB7C232094}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{83A13C8A-787B-4A0E-A730-672FA7D59428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A13C8A-787B-4A0E-A730-672FA7D59428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A13C8A-787B-4A0E-A730-672FA7D59428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A13C8A-787B-4A0E-A730-672FA7D59428}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
